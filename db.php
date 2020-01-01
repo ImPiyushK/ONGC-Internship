@@ -3,7 +3,7 @@
 <head>
     <style>
         #try {
-            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-family: Trebuchet MS;
             border-collapse: collapse;
             width: 100%;
         }
@@ -21,7 +21,7 @@
             background-color: #ddd;
         }
 
-        #try th {   <!--Heading-->
+        #try th {
             padding-top: 12px;
             padding-bottom: 12px;
             text-align: left;
@@ -35,7 +35,7 @@
     <title>Log Table</title>
 </head>
 <body>
-    
+
     <?php
         $dbhost = "localhost";
         $username = "root";
@@ -49,7 +49,6 @@
 	    	exit();
         }
     ?>
-
     <table id="try">
         <tr>
             <th>LogID</th>
