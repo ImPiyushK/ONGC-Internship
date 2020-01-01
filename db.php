@@ -1,6 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        #try {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #try td, #try th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #try tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+
+        #try tr:hover {
+            background-color: #ddd;
+        }
+
+        #try th {   <!--Heading-->
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #1E90FF;
+            color: white;
+    }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -22,7 +50,7 @@
         }
     ?>
 
-    <table>
+    <table id="try">
         <tr>
             <th>LogID</th>
             <th>Well Name</th>
