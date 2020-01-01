@@ -27,6 +27,16 @@
             <th>LogID</th>
             <th>Well Name</th>
             <th>Field Name</th>
+            <th>County</th>
+            <th>State/Location</th>
+            <th>Scale</th>
+            <th>Name of Log</th>
+            <th>Bottom Logged Interval</th>
+            <th>Top Logged Interval</th>
+            <th>Remark</th>
+            <th>Company</th>
+            <th>Box No</th>
+            <th>Packet No</th>
         </tr>
 
     <?php
@@ -37,7 +47,7 @@
         {
             while($row = mysqli_fetch_assoc($results))
             {
-                echo "<tr><td>" . $row['LogID'] . "</td><td>" . $row['Well Name'] . "</td><td>" . $row['Field Name'] . "</td></tr>"; 
+                echo "<tr><td>" . $row['LogID'] . "</td><td>" . $row['Well Name'] . "</td><td>" . $row['Field Name'] . "</td><td>" . $row['State/Location'] . "</td><td>" . $row['County'] . "</td><td>" . $row['Name of Log'] . "</td><td>" . $row['Bottom Logged Interval'] . "</td><td>" . $row['Top Logged Interval'] . "</td><td>" . $row['Remark'] . "</td><td>" . $row['Company'] . "</td><td>" . $row['Box No'] . "</td><td>" . $row['Packet No'] . "</td></tr>"; 
             }
     }   
     ?>
