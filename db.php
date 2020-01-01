@@ -47,7 +47,7 @@
         {
             while($row = mysqli_fetch_assoc($results))
             {
-                echo "<tr><td>" . $row['LogID'] . "</td><td>" . $row['Well Name'] . "</td><td>" . $row['Field Name'] . "</td><td>" . $row['State/Location'] . "</td><td>" . $row['County'] . "</td><td>" . $row['Name of Log'] . "</td><td>" . $row['Bottom Logged Interval'] . "</td><td>" . $row['Top Logged Interval'] . "</td><td>" . $row['Remark'] . "</td><td>" . $row['Company'] . "</td><td>" . $row['Box No'] . "</td><td>" . $row['Packet No'] . "</td></tr>"; 
+                echo "<tr><td>" . $row['LogID'] . "</td><td>" . $row['Well Name'] . "</td><td>" . $row['Field Name'] . "</td><td>" . $row['County'] . "</td><td>" . $row['State/Location'] . "</td><td>" . $row['Scale'] . "</td><td>" . $row['Name of Log'] . "</td><td>" . $row['Bottom Logged Interval'] . "</td><td>" . $row['Top Logged Interval'] . "</td><td>" . $row['Remark'] . "</td><td>" . $row['Company'] . "</td><td>" . $row['Box No'] . "</td><td>" . $row['Packet No'] . "</td></tr>"; 
             }
     }   
     ?>
