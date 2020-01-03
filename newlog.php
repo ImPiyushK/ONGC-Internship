@@ -29,7 +29,18 @@
     </form>
 
     <?php
-
+        $wellName = NULL;
+        $fieldName = NULL;
+        $county = NULL;
+        $state = NULL;
+        $scale = NULL;
+        $nameofLog = NULL;
+        $bli = NULL;
+        $tli = NULL;
+        $remark = NULL;
+        $company = NULL;
+        $boxNo = NULL;
+        $packetNo = NULL;
 
         if (isset($_GET['wellName'])){
             $wellName = $_GET['wellName'];
