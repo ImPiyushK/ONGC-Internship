@@ -1,3 +1,7 @@
+<?php  
+    include_once 'connect.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,12 +41,6 @@
 <body>
 
     <?php
-        $dbhost = "localhost";
-        $username = "root";
-        $password = "";
-	    $dbname = "dblogs";
-	
-	    $conn = mysqli_connect("$dbhost", "$username", "$password","$dbname");
 	    // Check connection
 	    if (mysqli_connect_errno()) {
     		echo ("Failed to connect to MySQL: " . $con  ->connect_error);
