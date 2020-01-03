@@ -30,52 +30,53 @@
 
     <?php
         if (isset($_POST['wellname'])){
-        $wellName = $_POST['wellName'];
+            $wellName = $_POST['wellName'];
         }
 
         if (isset($_POST['fieldName'])){
-        $fieldName = $_POST["fieldName"];
+            $fieldName = $_POST["fieldName"];
         }
 
         if (isset($_POST['county'])){
-        $county = $_POST["county"];
+            $county = $_POST["county"];
         }
 
         if (isset($_POST['state'])){
-        $state = $_POST["state"];
+            $state = $_POST["state"];
         }
 
         if (isset($_POST['scale'])){
-        $scale = $_POST["scale"];
+            $scale = $_POST["scale"];
         }
         if (isset($_POST['nameOfLog'])){
-        $nameofLog = $_POST["nameOfLog"];
+            $nameofLog = $_POST["nameOfLog"];
         }
 
         if (isset($_POST['bli'])){
-        $bli = $_POST["bli"];
+            $bli = $_POST["bli"];
         }
 
         if (isset($_POST['tli'])){
-        $tli = $_POST["tli"];
+            $tli = $_POST["tli"];
         }
 
         if (isset($_POST['remark'])){
-        $remark = $_POST["remark"];
+            $remark = $_POST["remark"];
         }
 
         if (isset($_POST['company'])){
-        $company = $_POST["company"];
+            $company = $_POST["company"];
         }
 
         if (isset($_POST['boxNo'])){
-        $boxNo = $_POST["boxNo"];
+            $boxNo = $_POST["boxNo"];
         }
 
         if (isset($_POST['packetNo'])){
-        $packetNo = $_POST["packetNo"];
+            $packetNo = $_POST["packetNo"];
         }   
-
+        
+        
     ?>
 
 </body>
