@@ -28,5 +28,22 @@
         <input type="Submit">
     </form>
 
+    <?php
+
+        $wellName = $_POST["wellName"];
+        $fieldName = $_POST["fieldName"];
+        $county = $_POST["county"];
+        $state = $_POST["state"];
+        $scale = $_POST["scale"];
+        $nameofLog = $_POST["nameOfLog"];
+        $bli = $_POST["bli"];
+        $tli = $_POST["tli"];
+        $remark = $_POST["remark"];
+        $company = $_POST["company"];
+        $boxNo = $_POST["boxNo"];
+        $packetNo = $_POST["packetNo"];    
+
+    ?>
+
 </body>
 </html>
