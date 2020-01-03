@@ -11,6 +11,9 @@
     <a href="newlog.php">Create a new Log</a>
     <br>
     <a href="db.php">List of Table</a>
+    <br>
+    <a href="update.php">Update Log</a>
+    <br>
 
 </body>
 </html>
