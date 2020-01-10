@@ -35,7 +35,32 @@
                 header("Location: ../signup.php?error=sqlperror");
                 exit();
             }
-            
+            else{
+                mysqli_stmt_bind_param($stmt, "s", $username);  //s=String, i=integer, d=double
+                mysqli_stmt_execute($stmt);
+                mysqli_stmt_store_result($stmt);
+                $resultCheck = mysqli_stmt_num_rows($stmt);
+                if($resultCheck > 0){
+                    header("Location: ../signup.php?error=usertaken&mail=".$email);
+                    exit();
+                }
+                else{
+                    $sql = "INSERT INTO users (uidUsers, email, pwd) VALUES (?, ?, ?)";
+                    $stmt = mysqli_stmt_init($conn);
+                    if(!mysqli_stmt_prepare($stmt, $sql)){
+                        header("Location: ../signup.php?error=sqlerror");
+                        exit();
+                    }
+                    else{
+                        $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
+
+                        mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashedpwd);  //s=String, i=integer, d=double
+                        mysqli_stmt_execute($stmt);
+                        header("Location: ../signup.php?signup=success");
+                        exit();
+                    }
+                }
+            }
         }
         mysqli_stmt_close($stmt);
         mysqli_close($conn);
