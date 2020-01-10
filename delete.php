@@ -15,7 +15,19 @@
         <button type="submit" name="delete">Delete</button>
     </form>
 
-
+<?php
+    if (isset($_POST['delete'])){
+        $id = $_POST['id'];
+        if($id!=NULL)
+        {
+            $sql = "DELETE FROM details WHERE LogID='$id';";
+            if(mysqli_query($conn, $sql))
+                echo "Records Deleted successfully.";
+            else
+                echo "ERROR: Could not able to execute $sql" . mysqli_connect_error($conn);
+        }
+    }
+?>
 
 </body>
 </html>
