@@ -1,15 +1,18 @@
+<?php  
+    include_once 'connect.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Update</title>
+    <title>Create New Log</title>
 </head>
 <body>
     
-    <form action="update.php" method="POST">
-        <input type="text" name="lid" placeholder="Enter LogID to Update"><br>
+    <form action="newlog.php" method="POST">
         Well Name: <input type="textbox" name="wellName"><br>
         Field Name: <input type="textbox" name="fieldName"><br>
         County: <input type="textbox" name="county"><br>
@@ -22,9 +25,9 @@
         Company: <input type="textbox" name="company"><br>
         Box No: <input type="textbox" name="boxNo"><br>
         Packet No: <input type="textbox" name="packetNo"><br>
-        <button type="submit" name="signup-submit">Update</button>
+        <input type="Submit">
     </form>
-    
+
     <?php
         $wellName = NULL;
         $fieldName = NULL;
@@ -38,11 +41,6 @@
         $company = NULL;
         $boxNo = NULL;
         $packetNo = NULL;
-        $id = NULL;
-
-        if (isset($_POST['lid'])){
-        $id = $_POST['lid'];
-        }
 
         if (isset($_POST['wellName'])){
             $wellName = $_POST['wellName'];
@@ -90,15 +88,16 @@
 
         if (isset($_POST['packetNo'])){
             $packetNo = $_POST["packetNo"];
-        }
-        if($id!=NULL)
+        }  
+        if($wellName!=NULL)
         {
-        $sql = "UPDATE `details` SET `Well Name` = '$wellName', `Field Name` = '$fieldName', `Name of Log` = '$nameofLog', `State/Location` = '$state', `County` = '$county', `Scale` = '$scale', `Bottom Logged Interval` = '$bli', `Top Logged Interval` = '$tli', `Remark` = '$remark', `Company` = '$company', `Box No` = '$boxNo', `Packet No` = '$packetNo' WHERE `LogID` = $id;";
+        $sql = "INSERT INTO details (`Well Name`, `Field Name`, `State/Location`, `County`, `Scale`, `Name of Log`, `Bottom Logged Interval`, `Top Logged Interval`, `Remark`, `Company`, `Box No`, `Packet No`) VALUES ('$wellName', '$fieldName', '$state', '$county', '$scale', '$nameofLog', '$bli', '$tli', '$remark', '$company', '$boxNo', '$packetNo');";
         if(mysqli_query($conn, $sql))
-            echo "Records Updated successfully.";
+            echo "Records inserted successfully.";
         else
             echo "ERROR: Could not able to execute $sql" . mysqli_connect_error($conn);
         }
     ?>
+
 </body>
 </html>
