@@ -28,6 +28,80 @@
         <button type="submit" name="signup-submit">Update</button>
     </form>
     
-   
+    <?php
+        $wellName = NULL;
+        $fieldName = NULL;
+        $county = NULL;
+        $state = NULL;
+        $scale = NULL;
+        $nameofLog = NULL;
+        $bli = NULL;
+        $tli = NULL;
+        $remark = NULL;
+        $company = NULL;
+        $boxNo = NULL;
+        $packetNo = NULL;
+        $id = NULL;
+
+        if (isset($_POST['lid'])){
+        $id = $_POST['lid'];
+        }
+
+        if (isset($_POST['wellName'])){
+            $wellName = $_POST['wellName'];
+        }
+
+
+        if (isset($_POST['fieldName'])){
+            $fieldName = $_POST["fieldName"];
+        }
+
+        if (isset($_POST['county'])){
+            $county = $_POST["county"];
+        }
+
+        if (isset($_POST['state'])){
+            $state = $_POST["state"];
+        }
+
+        if (isset($_POST['scale'])){
+            $scale = $_POST["scale"];
+        }
+        if (isset($_POST['nameOfLog'])){
+            $nameofLog = $_POST["nameOfLog"];
+        }
+
+        if (isset($_POST['bli'])){
+            $bli = $_POST["bli"];
+        }
+
+        if (isset($_POST['tli'])){
+            $tli = $_POST["tli"];
+        }
+
+        if (isset($_POST['remark'])){
+            $remark = $_POST["remark"];
+        }
+
+        if (isset($_POST['company'])){
+            $company = $_POST["company"];
+        }
+
+        if (isset($_POST['boxNo'])){
+            $boxNo = $_POST["boxNo"];
+        }
+
+        if (isset($_POST['packetNo'])){
+            $packetNo = $_POST["packetNo"];
+        }
+        if($id!=NULL)
+        {
+        $sql = "UPDATE `details` SET `Well Name` = '$wellName', `Field Name` = '$fieldName', `Name of Log` = '$nameofLog', `State/Location` = '$state', `County` = '$county', `Scale` = '$scale', `Bottom Logged Interval` = '$bli', `Top Logged Interval` = '$tli', `Remark` = '$remark', `Company` = '$company', `Box No` = '$boxNo', `Packet No` = '$packetNo' WHERE `LogID` = $id;";
+        if(mysqli_query($conn, $sql))
+            echo "Records Updated successfully.";
+        else
+            echo "ERROR: Could not able to execute $sql" . mysqli_connect_error($conn);
+        }
+    ?>
 </body>
 </html>
