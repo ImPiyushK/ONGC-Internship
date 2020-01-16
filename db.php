@@ -5,7 +5,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+	<title>Log Records</title>
     <style>
+	
         #try {
             font-family: Trebuchet MS;
             border-collapse: collapse;
@@ -36,7 +40,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Log Table</title>
 </head>
 <body>
 
@@ -47,6 +50,8 @@
 	    	exit();
         }
     ?>
+<div class="card-panel teal lighten-2">
+<h5>Log Records</h5><button style="float:top right"><a href="index.php">Back</a></button></div>
     <table id="try">
         <tr>
             <th>LogID</th>
